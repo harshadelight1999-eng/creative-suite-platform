@@ -1,0 +1,142 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Testing
+coverage/
+.nyc_output
+*.lcov
+
+# Next.js
+.next/
+out/
+
+# Production builds
+build/
+dist/
+*.tgz
+*.tar.gz
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache directories
+.cache/
+.parcel-cache/
+.npm
+.eslintcache
+.stylelintcache
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# API keys and secrets
+.env.secret
+.env.keys
+.env.private
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Media and uploads
+uploads/
+media/
+static/uploads/
+public/uploads/
+
+# Build tools
+.vite/
+.rollup.cache/
+.turbo/
+
+# Testing
+__tests__/__fixtures__/
+jest_coverage/
+.coverage/
+
+# Documentation
+docs/build/
+
+# Package manager locks (keep one, comment out others)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Remotion
+out/
+public/video/
+
+# AI/ML models
+*.model
+*.pkl
+*.h5
+*.pb
+
+# Supabase
+.supabase/
+
+# Vercel
+.vercel
+
+# Local development
+.local/
+localhost.*/
+dev-dist/

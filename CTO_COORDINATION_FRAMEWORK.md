@@ -25,6 +25,41 @@
 
 ---
 
+## 🚀 **GITHUB INTEGRATION & CI/CD STATUS**
+
+### **REPOSITORY CONFIGURATION**
+- **GitHub Account**: `harshadelight1999-eng`
+- **Repository**: https://github.com/harshadelight1999-eng/creative-suite-platform
+- **Primary Branch**: `main`
+- **Development Branch**: `develop`
+- **Local Directory**: `/Users/devji/Downloads/project pdf king`
+
+### **CI/CD PIPELINE STATUS** ✅
+- **GitHub Actions**: Configured and operational
+- **Quality Gates**: Linting, type checking, unit tests
+- **Security Scanning**: Trivy vulnerability detection
+- **Performance Testing**: Lighthouse CI integration
+- **E2E Testing**: Playwright automation
+- **Deployment**: Automated staging (develop) → production (main)
+- **Dependency Updates**: Weekly automated updates
+
+### **DEPLOYMENT ENVIRONMENTS**
+- **Staging**: `develop` branch → Vercel staging environment
+- **Production**: `main` branch → Vercel production environment
+- **Releases**: Automated GitHub releases on production deployment
+
+### **REQUIRED SECRETS CONFIGURATION**
+```bash
+# GitHub Repository Secrets (to be configured)
+VERCEL_TOKEN=your_vercel_token
+VERCEL_ORG_ID=your_vercel_org_id
+VERCEL_PROJECT_ID=your_vercel_project_id
+CODECOV_TOKEN=your_codecov_token
+LHCI_GITHUB_APP_TOKEN=your_lighthouse_ci_token
+```
+
+---
+
 ## TASK ASSIGNMENT PROTOCOLS
 
 ### IMMEDIATE TASK DELEGATION
@@ -292,6 +327,39 @@ interface DocumentStructure {
 
 ---
 
+## 🚀 **AUTOMATED DEPLOYMENT PIPELINE**
+
+### **STAGING DEPLOYMENT (develop branch)**
+**Triggered automatically on push to `develop`:**
+1. Quality gates pass (linting, tests, type checking)
+2. Security scan completes (no critical vulnerabilities)
+3. Build artifacts generated and stored
+4. Deploy to Vercel staging environment
+5. Run E2E tests against staging
+6. Performance validation with Lighthouse CI
+7. Notify team of staging deployment status
+
+### **PRODUCTION DEPLOYMENT (main branch)**
+**Triggered automatically on push to `main`:**
+1. All staging validation requirements met
+2. Manual approval gate for production release
+3. Deploy to Vercel production environment
+4. Create GitHub release with auto-generated notes
+5. Update deployment status and metrics
+6. Post-deployment monitoring and alerts
+
+### **ROLLBACK PROCEDURES**
+```bash
+# Emergency rollback via GitHub CLI
+gh api repos/harshadelight1999-eng/creative-suite-platform/deployments \
+  -X POST -f environment=production -f ref=previous-stable-commit
+
+# Or via Vercel CLI
+vercel rollback https://creative-suite-platform.vercel.app
+```
+
+---
+
 ## PRODUCTION READINESS CHECKLIST
 
 ### FINAL VALIDATION CRITERIA
@@ -323,4 +391,43 @@ interface DocumentStructure {
 
 ---
 
-This framework ensures our 7-agent team delivers a production-ready document platform while maintaining strict accountability, preventing scope creep, and ensuring seamless coordination between specialized domains.
+### **GITHUB WORKFLOW INTEGRATION**
+
+**Branch Strategy for Agents:**
+- `main`: Production-ready code (protected)
+- `develop`: Integration branch for features
+- `feature/agent-X-task-name`: Individual agent work branches
+- `hotfix/critical-issue`: Emergency fixes
+
+**Agent Commit Standards:**
+```bash
+# Commit message format
+feat(agent-X): implement feature description
+
+- Detailed implementation notes
+- Integration points with other agents
+- Performance improvements
+- Test coverage details
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+**Pull Request Process:**
+1. Agent creates feature branch from `develop`
+2. Implements assigned tasks with comprehensive testing
+3. Creates PR with detailed description and agent coordination notes
+4. Automated CI/CD runs quality gates and security scans
+5. Cross-agent review for integration points
+6. Merge to `develop` for integration testing
+7. Weekly releases merge `develop` → `main` for production
+
+**Agent Coordination via GitHub:**
+- **Issues**: Task assignment and tracking
+- **Projects**: Sprint planning and milestone tracking
+- **Discussions**: Technical decisions and architecture
+- **Wiki**: Documentation and knowledge sharing
+
+---
+
+This framework ensures our **12-agent team** delivers a production-ready creative platform while maintaining strict accountability, preventing scope creep, and ensuring seamless coordination between specialized domains through integrated GitHub workflows and automated CI/CD processes.
